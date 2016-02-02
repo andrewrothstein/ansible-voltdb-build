@@ -1,0 +1,5 @@
+---
+voltdb_github_mirror : 'https://github.com'
+voltdb_github_group : 'VoltDb'
+voltdb_github_user : 'voltdb'
+voltdb_version : '6.0'

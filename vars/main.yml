@@ -1,0 +1,3 @@
+---
+voltdb_tgz : 'voltdb-{{voltdb_version}}.tar.gz'
+voltdb_tgz_url : '{{voltdb_github_mirror}}/{{voltdb_github_group}}/{{voltdb_github_user}}/archive/{{voltdb_tgz}}'

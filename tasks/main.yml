@@ -1,0 +1,8 @@
+---
+- name: download src...
+  get_url: >-
+    url={{voltdb_tgz_url}}
+    dest=/tmp/{{voltdb_tgz}}
+    owner=root
+    group=root
+    mode=644
