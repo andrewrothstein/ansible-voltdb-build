@@ -36,3 +36,8 @@
   command: ant -Djmemcheck=NO_MEMCHECK
   args:
     chdir: '{{voltdb_install_dir}}'
+
+- name: clean up
+  command: ant cleantmp cleanugh
+  args:
+    chdir: '{{voltdb_install_dir}}'
