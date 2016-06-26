@@ -2,4 +2,4 @@
 voltdb_name : 'voltdb-{{voltdb_version}}'
 voltdb_tgz : '{{voltdb_name}}.tar.gz'
 voltdb_tgz_url : '{{voltdb_github_mirror}}/{{voltdb_github_group}}/{{voltdb_github_user}}/archive/{{voltdb_tgz}}'
-voltdb_build_work_dir : '{{voltdb_build_dir}}/voltdb-{{voltdb_name}}'
+voltdb_install_dir : '{{voltdb_install_parent_dir}}/voltdb-{{voltdb_name}}'

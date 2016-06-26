@@ -4,5 +4,4 @@ voltdb_github_group : 'VoltDb'
 voltdb_github_user : 'voltdb'
 voltdb_version : '6.3'
 
-voltdb_build_dir : /voltdb-build
-voltdb_install_dir : /voltdb
+voltdb_install_parent_dir : /voltdb
