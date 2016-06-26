@@ -2,4 +2,7 @@
 voltdb_github_mirror : 'https://github.com'
 voltdb_github_group : 'VoltDb'
 voltdb_github_user : 'voltdb'
-voltdb_version : '6.0'
+voltdb_version : '6.3'
+
+voltdb_build_dir : /voltdb-build
+voltdb_install_dir : /voltdb

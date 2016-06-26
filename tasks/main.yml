@@ -1,4 +1,14 @@
 ---
+- include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ansible_distribution_release}}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+
+- name: install package dependencies
+  package: name={{item}} state=present
+  with_items: '{{voltdb_build_pkgs}}'
+    
 - name: download src...
   get_url: >-
     url={{voltdb_tgz_url}}
@@ -6,3 +16,23 @@
     owner=root
     group=root
     mode=644
+
+- name: mkdir build dir
+  file: >-
+    path={{voltdb_build_dir}}
+    state=directory
+    owner=root
+    group=root
+    mode=0755
+
+- name: unarchive
+  unarchive: >-
+    copy=no
+    src=/tmp/{{voltdb_tgz}}
+    dest={{voltdb_build_dir}}
+    creates={{voltdb_build_work_dir}}
+
+- name: build
+  command: ant -Djmemcheck=NO_MEMCHECK
+  args:
+    chdir: '{{voltdb_build_work_dir}}'

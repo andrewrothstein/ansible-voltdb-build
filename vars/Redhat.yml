@@ -1,0 +1,21 @@
+---
+voltdb_build_pkgs :
+  - ant
+  - ant-nodeps
+  - ant-junit
+  - ant-scripts
+  - ant-javadoc
+  - ant-trax
+  - gcc
+  - gcc-c++
+  - python
+  - valgrind
+  - ntp
+  - python26
+  - git-all
+  - python-httplib2
+  - python-setuptools
+  - python-devel
+  - ccache
+  - cmake
+  - bzip2
