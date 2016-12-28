@@ -1,10 +1,15 @@
 ---
+- name: debuggering
+  debug: msg='ansible_distribution = {{ansible_distribution}} ; ansible_os_family = {{ansible_os_family}} ; ansible_distribution_release = {{ansible_distribution_release}}'
+
 - name: resolve platform specific vars
-  include_vars: '{{item}}'
+  include_vars: "{{item}}"
   with_first_found:
-    - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
-    - '{{ansible_distribution}}.yml'
-    - '{{ansible_os_family}}.yml'
+    - files:
+        - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+        - "{{ansible_distribution}}.yml"
+        - "{{ansible_os_family}}.yml"
+#      skip: true
 
 - name: install package dependencies
   become: yes
