@@ -2,17 +2,15 @@
 - name: resolve platform specific vars
   include_vars: "{{item}}"
   with_first_found:
-    - files:
-        - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-        - "{{ansible_distribution}}.yml"
-        - "{{ansible_os_family}}.yml"
-      skip: true
+    - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+    - "{{ansible_distribution}}.yml"
+    - "{{ansible_os_family}}.yml"
 
 - name: install package dependencies
   become: yes
   become_user: root
   package: name={{item}} state=present
-  with_items: '{{voltdb_build_pkgs|default([])}}'
+  with_items: '{{voltdb_build_pkgs}}'
     
 - name: download src...
   become: yes
