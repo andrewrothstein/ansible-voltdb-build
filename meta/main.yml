@@ -22,6 +22,6 @@ galaxy_info:
     - database
     - in-memory
 
-dependencies:
-  - role: andrewrothstein.java-oracle-jdk
-    version: v1.0.1
+dependencies: []
+#  - role: andrewrothstein.java-oracle-jdk
+#    version: v1.0.1
