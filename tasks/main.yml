@@ -12,7 +12,7 @@
   become: yes
   become_user: root
   package: name={{item}} state=present
-  with_items: '{{voltdb_build_pkgs}}'
+  with_items: '{{voltdb_build_pkgs|default([])}}'
     
 - name: download src...
   become: yes
