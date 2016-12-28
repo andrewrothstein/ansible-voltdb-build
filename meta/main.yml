@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: '@TODO name this role'
+  description: role to build/install voltdb
   company: BlackRock
   license:
     - MIT
@@ -16,11 +16,12 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - trusty
+        - xenial
 
   galaxy_tags:
-    - development
+    - database
+    - in-memory
 
 dependencies:
-  - role: andrewrothstein.java
-    java_ver: 8
-  
+  - role: andrewrothstein.java-oracle-jdk
+    version: v1.0.1

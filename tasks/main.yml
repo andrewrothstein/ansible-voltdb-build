@@ -6,26 +6,30 @@
     - "{{ ansible_os_family }}.yml"
 
 - name: install package dependencies
+  become: yes
+  become_user: root
   package: name={{item}} state=present
   with_items: '{{voltdb_build_pkgs}}'
     
 - name: download src...
+  become: yes
+  become_user: root
   get_url: >-
     url={{voltdb_tgz_url}}
     dest=/tmp/{{voltdb_tgz}}
-    owner=root
-    group=root
-    mode=644
+    mode=0644
 
 - name: mkdir voltdb parent dir
+  become: yes
+  become_user: root
   file: >-
     path={{voltdb_install_parent_dir}}
     state=directory
-    owner=root
-    group=root
     mode=0755
 
 - name: unarchive
+  become: yes
+  become_user: root
   unarchive: >-
     copy=no
     src=/tmp/{{voltdb_tgz}}
@@ -33,11 +37,15 @@
     creates={{voltdb_install_dir}}
 
 - name: build
+  become: yes
+  become_user: root
   command: ant -Djmemcheck=NO_MEMCHECK
   args:
     chdir: '{{voltdb_install_dir}}'
 
 - name: clean up
+  become: yes
+  become_user: root
   command: ant cleantmp cleanugh
   args:
     chdir: '{{voltdb_install_dir}}'
