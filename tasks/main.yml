@@ -11,7 +11,7 @@
 - name: install package dependencies
   become: yes
   become_user: root
-  with_items: '{{voltdb_build_pkgs}}'
+  with_items: '{{voltdb_build_pkgs|default([])}}'
   package:
     name: '{{item}}'
     state: present
