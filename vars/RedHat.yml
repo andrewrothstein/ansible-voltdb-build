@@ -1,7 +1,6 @@
 ---
 voltdb_build_pkgs :
   - ant
-  - ant-nodeps
   - ant-junit
   - ant-scripts
   - ant-javadoc
