@@ -4,7 +4,6 @@ voltdb_build_pkgs :
   - ant-junit
   - ant-scripts
   - ant-javadoc
-  - ant-trax
   - gcc
   - gcc-c++
   - python
