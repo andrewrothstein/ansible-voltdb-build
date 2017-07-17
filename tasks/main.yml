@@ -36,7 +36,7 @@
   become: yes
   become_user: root
   unarchive:
-    remote_src: no
+    remote_src: yes
     src: /tmp/{{voltdb_tgz}}
     dest: '{{voltdb_install_parent_dir}}'
     creates: '{{voltdb_install_dir}}'
