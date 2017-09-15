@@ -1,12 +1,14 @@
 ---
 - name: resolve platform specific vars
-  include_vars: "{{item}}"
+  include_vars: '{{item}}'
   with_first_found:
     - files:
-        - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
-        - "{{ansible_distribution}}.yml"
-        - "{{ansible_os_family}}.yml"
+        - '{{ansible_distribution}}-{{ansible_distribution_release}}.yml'
+        - '{{ansible_distribution}}.yml'
+        - '{{ansible_os_family}}.yml'
       skip: true
+      paths:
+        - '{{role_path}}/vars'
 
 - name: install package dependencies
   become: yes
@@ -23,14 +25,6 @@
     url: '{{voltdb_tgz_url}}'
     dest: /tmp/{{voltdb_tgz}}
     mode: '0644'
-
-- name: mkdir voltdb parent dir
-  become: yes
-  become_user: root
-  file:
-    path: '{{voltdb_install_parent_dir}}'
-    state: directory
-    mode: '0755'
 
 - name: unarchive
   become: yes

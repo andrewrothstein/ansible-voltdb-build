@@ -1,7 +1,8 @@
 andrewrothstein.voltdb-build
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-voltdb-build.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-voltdb-build)
 
-A role to build [VoltDB](https://www.voltdb.com/)
+Builds [VoltDB](https://www.voltdb.com/) from source
 
 Requirements
 ------------

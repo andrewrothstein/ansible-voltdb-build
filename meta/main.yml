@@ -15,10 +15,15 @@ galaxy_info:
         - 23
         - 24
         - 25
+        - 26
     - name: Ubuntu
       versions:
         - trusty
         - xenial
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
 
   galaxy_tags:
     - database
@@ -28,4 +33,4 @@ dependencies:
   - role: andrewrothstein.epel
     version: v1.0.5
   - role: andrewrothstein.java-oracle-jdk
-    version: v2.0.3
+    version: v2.0.4
