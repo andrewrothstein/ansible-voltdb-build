@@ -38,13 +38,13 @@
 - name: build
   become: yes
   become_user: root
-  command: ant -Djmemcheck=NO_MEMCHECK
+  command: sh -l -c 'ant -Djmemcheck=NO_MEMCHECK'
   args:
     chdir: '{{voltdb_install_dir}}'
 
 - name: clean up
   become: yes
   become_user: root
-  command: ant cleantmp cleanugh
+  command: sh -l -c 'ant cleantmp cleanugh'
   args:
     chdir: '{{voltdb_install_dir}}'
