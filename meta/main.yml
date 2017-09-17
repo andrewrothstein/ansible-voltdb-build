@@ -30,7 +30,13 @@ galaxy_info:
     - in-memory
 
 dependencies:
-  - role: andrewrothstein.epel
+  - src: andrewrothstein.curl
+    version: v1.0.3
+  - src: andrewrothstein.epel
     version: v1.0.5
-  - role: andrewrothstein.java-oracle-jdk
+  - src: andrewrothstein.python
+    version: v1.0.10
+  - src: andrewrothstein.java-oracle-jdk
     version: v2.0.4
+  - src: andrewrothstein.gcc-toolbox
+    version: v1.0.6

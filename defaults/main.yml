@@ -2,6 +2,6 @@
 voltdb_github_mirror : https://github.com
 voltdb_github_group : VoltDb
 voltdb_github_user : voltdb
-voltdb_version : '7.0'
+voltdb_version : '7.6'
 
 voltdb_install_parent_dir : /usr/local

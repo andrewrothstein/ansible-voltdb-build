@@ -24,9 +24,9 @@
   get_url:
     url: '{{voltdb_tgz_url}}'
     dest: /tmp/{{voltdb_tgz}}
-    mode: '0644'
+    mode: 0644
 
-- name: unarchive
+- name: unarchive...
   become: yes
   become_user: root
   unarchive:
@@ -35,14 +35,14 @@
     dest: '{{voltdb_install_parent_dir}}'
     creates: '{{voltdb_install_dir}}'
 
-- name: build
+- name: build...
   become: yes
   become_user: root
   command: sh -l -c 'ant -Djmemcheck=NO_MEMCHECK'
   args:
     chdir: '{{voltdb_install_dir}}'
 
-- name: clean up
+- name: clean up...
   become: yes
   become_user: root
   command: sh -l -c 'ant cleantmp cleanugh'

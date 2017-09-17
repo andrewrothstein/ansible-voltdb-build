@@ -1,10 +1,6 @@
 ---
 voltdb_build_pkgs :
-  - python
-  - python-dev
   - ant
-  - build-essential
-  - curl
   - ccache
   - cmake
   - valgrind

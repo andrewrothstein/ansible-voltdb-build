@@ -1,19 +1,7 @@
 ---
 voltdb_build_pkgs :
   - ant
-  - ant-junit
-  - ant-scripts
-  - ant-javadoc
-  - gcc
-  - gcc-c++
-  - python
-  - valgrind
-  - ntp
-  - python26
-  - git-all
-  - python-httplib2
-  - python-setuptools
-  - python-devel
   - ccache
   - cmake
-  - bzip2
+  - valgrind
+
