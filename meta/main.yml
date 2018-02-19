@@ -39,4 +39,4 @@ dependencies:
   - src: andrewrothstein.java-oracle-jdk
     version: v2.0.5
   - src: andrewrothstein.gcc-toolbox
-    version: v1.0.6
+    version: v1.0.7
