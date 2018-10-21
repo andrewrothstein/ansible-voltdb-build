@@ -33,10 +33,10 @@ dependencies:
   - src: andrewrothstein.curl
     version: v1.0.3
   - src: andrewrothstein.epel
-    version: v1.0.5
+    version: v1.0.6
   - src: andrewrothstein.python
     version: v1.0.10
   - src: andrewrothstein.java-oracle-jdk
-    version: v2.0.8
+    version: v2.1.0
   - src: andrewrothstein.gcc-toolbox
     version: v1.0.7
