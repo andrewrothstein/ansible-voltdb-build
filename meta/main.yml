@@ -1,42 +1,39 @@
----
+dependencies:
+- role: andrewrothstein.curl
+  version: v1.0.3
+- role: andrewrothstein.epel
+  version: v1.0.6
+- role: andrewrothstein.python
+  version: v1.0.10
+- role: andrewrothstein.openjdk
+  version: v1.0.0
+- role: andrewrothstein.gcc-toolbox
+  version: v1.0.7
 galaxy_info:
   author: Andrew Rothstein
-  description: role to build/install voltdb
   company: BlackRock
+  description: role to build/install voltdb
+  galaxy_tags:
+  - database
+  - in-memory
   license:
-    - MIT
+  - MIT
   min_ansible_version: 2.0
   platforms:
-    - name: EL
-      versions:
-        - 7
-    - name: Fedora
-      versions:
-        - 23
-        - 24
-        - 25
-        - 26
-    - name: Ubuntu
-      versions:
-        - trusty
-        - xenial
-    - name: Debian
-      versions:
-        - jessie
-        - stretch
-
-  galaxy_tags:
-    - database
-    - in-memory
-
-dependencies:
-  - src: andrewrothstein.curl
-    version: v1.0.3
-  - src: andrewrothstein.epel
-    version: v1.0.6
-  - src: andrewrothstein.python
-    version: v1.0.10
-  - src: andrewrothstein.java-oracle-jdk
-    version: v2.1.2
-  - src: andrewrothstein.gcc-toolbox
-    version: v1.0.7
+  - name: EL
+    versions:
+    - 7
+  - name: Fedora
+    versions:
+    - 23
+    - 24
+    - 25
+    - 26
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
