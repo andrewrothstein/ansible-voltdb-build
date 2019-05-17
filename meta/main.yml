@@ -2,7 +2,7 @@ dependencies:
 - role: andrewrothstein.curl
   version: v1.0.3
 - role: andrewrothstein.epel
-  version: v1.0.6
+  version: v1.0.8
 - role: andrewrothstein.python
   version: v1.0.10
 - role: andrewrothstein.openjdk
