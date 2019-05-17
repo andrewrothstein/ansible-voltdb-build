@@ -8,7 +8,7 @@ dependencies:
 - role: andrewrothstein.openjdk
   version: v1.0.0
 - role: andrewrothstein.gcc-toolbox
-  version: v1.0.7
+  version: v1.0.11
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock
