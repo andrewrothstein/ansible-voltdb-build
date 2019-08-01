@@ -6,9 +6,10 @@ dependencies:
 - role: andrewrothstein.python
   version: v1.0.10
 - role: andrewrothstein.openjdk
-  version: v1.0.0
+  version: v2.0.1
+  openjdk_app: jdk
 - role: andrewrothstein.gcc-toolbox
-  version: v1.0.11
+  version: v1.0.12
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock
